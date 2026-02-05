@@ -54,7 +54,7 @@ with model:
         dimensions=1,
         neuron_type=nengo.LIF(
             tau_rc=0.01,    # Membrane time constant (20ms)
-            tau_ref=0.01,  # Refractory period (2ms)
+            tau_ref=0.001,  # Refractory period (2ms)
         ),
         # These settings make input map directly to current:
         gain=[1.0],         # No scaling: current = input
@@ -72,7 +72,7 @@ with model:
     # ===========================================
     # Spikes are filtered by synapse before reaching next neuron.
     # This node shows the post-synaptic current/potential.
-    SYNAPSE_TAU = 0.02  # Synaptic time constant (10ms) - try 0.005, 0.02, 0.05
+    SYNAPSE_TAU = 0.1  # Synaptic time constant (10ms) - try 0.005, 0.02, 0.05
 
     post_synaptic = nengo.Node(size_in=1, label="Post-Synaptic")
     nengo.Connection(neuron.neurons, post_synaptic,

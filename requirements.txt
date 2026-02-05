@@ -1,0 +1,7 @@
+nengo==4.1.0
+nengo-gui==0.6.0
+nengo-dl==3.4.0
+tensorflow==2.5.3
+numpy==1.23.5
+jedi==0.19.2
+python-utils<3.6
