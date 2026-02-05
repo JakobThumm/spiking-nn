@@ -53,8 +53,8 @@ with model:
         n_neurons=1,
         dimensions=1,
         neuron_type=nengo.LIF(
-            tau_rc=0.01,    # Membrane time constant (20ms)
-            tau_ref=0.01,  # Refractory period (2ms)
+            tau_rc=0.1,    # Membrane time constant (20ms)
+            tau_ref=0.001,  # Refractory period (2ms)
         ),
         # These settings make input map directly to current:
         gain=[1.0],         # No scaling: current = input
